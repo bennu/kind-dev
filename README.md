@@ -1,8 +1,6 @@
 # kind-dev
 
-A easy way to enabled [kubernetes addons](https://kubernetes.io/docs/concepts/cluster-administration/addons/) to a [Kind](https://github.com/kubernetes-sigs/kind) local cluste.
-
-# Addons
+A easy way to enabled [kubernetes addons](https://kubernetes.io/docs/concepts/cluster-administration/addons/) to a [Kind](https://github.com/kubernetes-sigs/kind) local cluster.
 
 Addons | Version | 
 | :--- | :---: |
