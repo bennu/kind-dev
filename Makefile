@@ -9,7 +9,7 @@ startup:
 .PHONY: addons
 addons:
 	@echo "+ $@"
-	./hack/enabled-addon.sh metric-server
+	./hack/enabled-addon.sh metrics-server
 	./hack/enabled-addon.sh dashboard
 	./hack/enabled-addon.sh ingress-nginx
 
