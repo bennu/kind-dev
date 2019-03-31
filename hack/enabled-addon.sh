@@ -100,6 +100,11 @@ ingress_nginx(){
 	$sh_c "KUBECONFIG=${KUBECONFIG} kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/provider/cloud-generic.yaml"
 }
 
+dashboard(){
+	$sh_c "KUBECONFIG=${KUBECONFIG} kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml"
+	$sh_c "KUBECONFIG=${KUBECONFIG} kubectl apply -f ../addons/dashboard-adminuser.yml"
+}
+
 run() {
 	if [ $# -ne 1 ]; then
 		usage
@@ -113,7 +118,7 @@ run() {
 }
 
 usage() {
-	echo 1>&2 "Usage: $0 one of [ingress-nginx, metallb, metric-server]"
+	echo 1>&2 "Usage: $0 one of [ingress-nginx, metallb, metric-server, dashboard]"
 	exit 1
 }
 

@@ -10,7 +10,7 @@ startup:
 addons:
 	@echo "+ $@"
 	./hack/enabled-addon.sh metric-server
-	./hack/enabled-addon.sh metallb
+	./hack/enabled-addon.sh dashboard
 	./hack/enabled-addon.sh ingress-nginx
 
 .PHONY: clean
