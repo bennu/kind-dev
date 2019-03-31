@@ -55,7 +55,7 @@ EOF
 
 check_addons(){
 	case "$1" in
-		ingress-nginx|metallb|metric-server|dashboard)
+		ingress-nginx|metallb|metrics-server|dashboard)
 		;;
 		*)
 		usage
@@ -73,7 +73,7 @@ check_metallb(){
 	fi
 }
 
-metric_server() {
+metrics_server() {
 	mkdir -p $TMP_GIT
 
 	cd $TMP_GIT
@@ -118,7 +118,7 @@ run() {
 }
 
 usage() {
-	echo 1>&2 "Usage: $0 one of [ingress-nginx, metallb, metric-server, dashboard]"
+	echo 1>&2 "Usage: $0 one of [ingress-nginx, metallb, metrics-server, dashboard]"
 	exit 1
 }
 
