@@ -1,8 +1,8 @@
-.PHONY: kind-dev
-kind-dev: startup addons
-
 .PHONY: startup
-startup: addons
+startup: bootstrap addons
+
+.PHONY: bootstrap
+bootstrap:
 	@echo "+ $@"
 	kind create cluster --config kind.config --name local
 
