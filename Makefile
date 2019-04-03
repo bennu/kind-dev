@@ -2,7 +2,7 @@
 kind-dev: startup addons
 
 .PHONY: startup
-startup:
+startup: addons
 	@echo "+ $@"
 	kind create cluster --config kind.config --name local
 
